@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6BM Website</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="page-brand">
+            <img src="./images/logo.png" alt="6BM logo" />
+        </div>
+        <div class="menu-icons">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="page-navigation">
+            <ul class="page-navigation__items">
+                <li class="page-navigation__item">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="page-navigation__item">
+                    <a href="#about">About</a>
+                </li>
+                <li class="page-navigation__item">
+                    <a href="#concerts">Concerts</a>
+                </li>
+                <li class="page-navigation__item">
+                    <a href="#video">Video</a>
+                </li>
+                <li class="page-navigation__item">
+                    <a href="#photos">Photos</a>
+                </li>
+                <li class="page-navigation__item">
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="content-section">
+            <ul class="band-members">
+                <li class="band-members__item">
+                    <div class="image-container">
+                        <img class="band-members__image" src="./images/band-member01.png" alt="Image of stylized keyboard player's face" />
+                    </div>                    
+                    <p class="band-members__name">Kamil Zgondek</p>
+                    <p class="band-members__desc">Keyboard</p>
+                </li>
+                <li class="band-members__item">
+                    <div class="image-container">
+                        <img class="band-members__image" src="./images/band-member02.png" alt="Image of stylized keyboard player's face" />
+                    </div>   
+                    <p class="band-members__name">Łukasz Furman</p>
+                    <p class="band-members__desc">Vocals</p>
+                </li>
+                <li class="band-members__item">
+                    <div class="image-container">
+                        <img class="band-members__image" src="./images/band-member03.png" alt="Image of stylized keyboard player's face" />
+                    </div>   
+                    <p class="band-members__name">Kamil Majewski</p>
+                    <p class="band-members__desc">Drums</p>
+                </li>
+                <li class="band-members__item">
+                    <div class="image-container">
+                        <img class="band-members__image" src="./images/band-member04.png" alt="Image of stylized keyboard player's face" />
+                    </div>   
+                    <p class="band-members__name">Daniel Cajzer</p>
+                    <p class="band-members__desc">Bass guitar</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="about" class="content-section">
+            <h2 class="content-section__header">About</h2>
+                <div class="about--image-container">
+                    <img src="./images/band01.jpg" alt="Image of band members standing at the construction site" />
+                </div>
+                
+                <div class="about-section__desc">
+                    <h3 class="about-section__desc-header">Straight from Lublin</h3>
+                    <p class="about-section__desc-details">
+                        6BM is a young band which has it's origins in the city of Lublin, playing music described as electrorock.<br/>
+                        Band members aim to convey emotions, reflexion but also hope.<br/><br/>
+                        They are inspired by various genres, like: alternative rock, nu-metal, synthwave or even drum'n'bass.<br/>
+                        As for now they released their debut EP - TRINITY and they started working on their first full length album.
+                    </p>
+                </div>
+        </section>
+        <section id="concerts" class="content-section">
+            <h2 class="content-section__header">Concerts</h2>
+            <div class="concerts">
+                <article class="concerts__item">
+                    <div class="concerts__item__img">
+                        <img class="concerts__image" src="./images/band02_WiechnikMarcin.jpg"
+                        alt="Image of band drummer during a concert" />
+                    </div>                    
+                    <header class="concerts__info">
+                        <div class="concerts__info-base">
+                            <p class="concerts__date">20.12.2018</p>
+                            <p class="concerts__location">Lublin, klub XXX</p>
+                        </div>
+                        <button class="button button--buy-ticket">Buy a ticket</button>
+                    </header>
+                </article>
+                <article class="concerts__item">
+                    <div class="concerts__item__img">
+                        <img class="concerts__image" src="./images/band03_WiechnikMarcin.jpg"
+                        alt="Image of band vocalist and keyboard player during a concert" />
+                    </div>                    
+                    <header class="concerts__info">
+                        <div class="concerts__info-base">
+                            <p class="concerts__date">20.12.2018</p>
+                            <p class="concerts__location">Lublin, klub XXX</p>
+                        </div>
+                        <button class="button button--buy-ticket">Buy a ticket</button>
+                    </header>
+                </article>
+                <article class="concerts__item">
+                    <div class="concerts__item__img">
+                         <img class="concerts__image" src="./images/band04_JakubBodys.jpg"
+                        alt="Image of band keyboard player during a concert" />
+                    </div>                   
+                    <header class="concerts__info">
+                        <div class="concerts__info-base">
+                            <p class="concerts__date">20.12.2018</p>
+                            <p class="concerts__location">Lublin, klub XXX</p>
+                        </div>
+                        <button class="button button--buy-ticket">Buy a ticket</button>
+                    </header>
+                </article>
+                <article class="concerts__item">
+                    <div class="concerts__item__img">
+                        <img class="concerts__image" src="./images/band05_JakubBodys.jpg"
+                        alt="Image of band vocalist during a concert" />
+                    </div>                    
+                    <header class="concerts__info">
+                        <div class="concerts__info-base">
+                            <p class="concerts__date">20.12.2018</p>
+                            <p class="concerts__location">Lublin, klub XXX</p>
+                        </div>
+                        <button class="button button--buy-ticket">Buy a ticket</button>
+                    </header>
+                </article>
+            </div>
+        </section>
+
+        <section id="video" class="content-section">
+            <h2 class="content-section__header">Video</h2>
+            <div class="video-container">
+                <iframe width="350" height="250" src="https://www.youtube.com/embed/AstRXh-vKNI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>            
+        </section>
+        <section id="photos" class="content-section">
+            <h2 class="content-section__header">Photos</h2>
+            <ul class="gallery">
+                <li class="gallery__item">
+                    <img class="gallery__image" src="./images/band05_JakubBodys.jpg" alt="Image of band vocalist during a concert" />
+                </li>
+                <li class="gallery__item">
+                    <img class="gallery__image" src="./images/band06_JakubBodys.jpg" alt="Image of band drummer during a concert" />
+                </li>
+                <li class="gallery__item">
+                    <img class="gallery__image" src="./images/band07.jpg" alt="Image of band members at the construction site" />
+                </li>
+                <li class="gallery__item">
+                    <img class="gallery__image" src="./images/band08.jpg" alt="Image of band members posing against the wall with graffiti" />
+                </li>
+                <li class="gallery__item">
+                    <img class="gallery__image" src="./images/band09.jpg" alt="Image of band members standing in the shadows" />
+                </li>
+                <li class="gallery__item">
+                    <img class="gallery__image" src="./images/band10.jpg" alt="Image of band members standing at the construction site" />
+                </li>
+                <li class="gallery__item">
+                    <img class="gallery__image" src="./images/band11.jpg" alt="Image of band vocalist during a concert" />
+                </li>
+                <li class="gallery__item">
+                    <img class="gallery__image" src="./images/band04_JakubBodys.jpg" alt="Image of band keyboard player during a concert" />
+                </li>
+                <li class="gallery__item">
+                    <img class="gallery__image" src="./images/band03_WiechnikMarcin.jpg" alt="Image of band vocalist and keyboard player during a concert" />
+                </li>
+            </ul>
+        </section>
+    </main>
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
