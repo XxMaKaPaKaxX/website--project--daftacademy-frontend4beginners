@@ -59,8 +59,11 @@ img {
     letter-spacing: 3.8px;
 }
 
-
-/* HEADER */
+/*
+######################################
+SEKCJA "HEADER"
+######################################
+*/
 
 header.page-header {
     position: fixed;
@@ -76,7 +79,6 @@ header .page-brand {
     width: 30%;
     margin: 10px;
 }
-
 
 header .menu-icons {
     position: absolute;
@@ -114,11 +116,9 @@ ul.page-navigation__items {
 
 li.page-navigation__item {
     flex-basis: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 li.page-navigation__item a {
@@ -190,7 +190,6 @@ SEKCJA "ABOUT"
 ######################################
 */
 
-
 section#about {
     position: relative;
     background-color: rgb(37, 15, 46);
@@ -212,7 +211,6 @@ section#about {
 .about-section__desc-header {
     margin: 10px 0;
 }
-
 
 /*
 ######################################
@@ -244,14 +242,12 @@ SEKCJA "CONCERTS"
     margin-right: 10px;
     border-right: 3px solid rgb(239, 82, 142);
     border-bottom: 3px solid rgb(239, 82, 142);
-
 }
 
 .concerts__info {
     position: relative;
     flex-grow: 1;
 }
-
 
 .concerts__info-base {
     text-align: end;
@@ -282,6 +278,7 @@ section#video {
 .video-container {
     margin: 10px;
     text-align: center;
+    border-top: 3px solid rgb(239, 82, 142);
 }
 
 
@@ -303,4 +300,93 @@ SEKCJA "PHOTOS"
 .gallery__item {
     flex-basis: 40%;
     border-top: 3px solid rgb(239, 82, 142);
+}
+
+
+/*
+######################################
+SEKCJA "CONTACT"
+######################################
+*/
+#contact {
+    position: relative;
+}
+
+.contact__img-container {
+    width: 90%;
+    margin: 10px auto 20px;
+}
+
+address {
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+.form {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 30vh;
+    justify-content: center;
+}
+
+.form__field {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.form__label {
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.form__input {
+    display: block;
+    height: 35px;
+    width: 300px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(219, 216, 251, 0.1);
+}
+
+
+/*
+######################################
+SEKCJA "FOOTER"
+######################################
+*/
+
+
+.page-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 7vh;
+    background-color: rgb(37, 15, 46);
+    width: 100%;
+}
+
+.social-links {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
 }
