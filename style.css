@@ -11,6 +11,16 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
     font-weight: normal;
+    background-color: rgb(37, 15, 46);
+
+    /* display: flex; */
+}
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 ul {
@@ -43,13 +53,16 @@ img {
 }
 
 .content-section {
-    min-height: 100vh;
+    min-height: 90vh;
     background-color: rgb(37, 15, 46);
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .content-section__header {
     display: block;
+    width: 100%;
     height: 10vh;
     text-align: center;
     line-height: 10vh;
@@ -57,6 +70,7 @@ img {
     font-weight: bold;
     font-size: 15px;
     letter-spacing: 3.8px;
+    color: rgb(239, 82, 142);
 }
 
 /*
@@ -77,7 +91,11 @@ header.page-header {
 
 header .page-brand {
     width: 30%;
+    height: 50%;
     margin: 10px;
+    background-image: url('./images/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 header .menu-icons {
@@ -87,6 +105,10 @@ header .menu-icons {
     transform: translate(-50%, -50%);
     font-size: 30px;
     color: rgb(240, 83, 143);
+}
+
+.page-navigation--full {
+    display: none;
 }
 
 header nav.page-navigation {
@@ -148,20 +170,21 @@ section#home {
     background-image: url("./images/background.svg");
     background-repeat: none;
     background-size: cover;
+    position: relative;
 }
 
 .band-members {
     position: absolute;
     width: 100%;
-    height: 70%;
+    height: 80%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -45%);
+    transform: translate(-50%, -50%);
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-content: space-between;
-
+    align-content: space-around;
 }
 
 .band-members__item {
@@ -219,19 +242,12 @@ SEKCJA "CONCERTS"
 */
 
 .concerts {
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: center; */
-
     display: flex;
     flex-wrap: wrap;
     margin: 15px 0;
 }
 
 .concerts__item {
-    /* flex-basis: 100%;
-    height: 40vh; */
     flex-basis: 100%;
     display: flex;
     margin: 15px;
@@ -276,7 +292,7 @@ section#video {
 }
 
 .video-container {
-    margin: 10px;
+    margin: 10px auto;
     text-align: center;
     border-top: 3px solid rgb(239, 82, 142);
 }
@@ -292,12 +308,12 @@ SEKCJA "PHOTOS"
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    height: 80vh;
     justify-content: space-around;
     align-content: space-around;
 }
 
 .gallery__item {
+    margin: 5px;
     flex-basis: 40%;
     border-top: 3px solid rgb(239, 82, 142);
 }
@@ -314,28 +330,24 @@ SEKCJA "CONTACT"
 
 .contact__img-container {
     width: 90%;
-    margin: 10px auto 20px;
+    margin: 0 auto;
 }
 
 address {
     text-align: center;
     font-size: 20px;
+    margin: 5px auto;
 }
 
-
-
 .form {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-bottom: 10vh;
     display: flex;
     flex-wrap: wrap;
-    min-height: 30vh;
     justify-content: center;
 }
 
 .form__field {
+    flex-basis: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -343,19 +355,26 @@ address {
 }
 
 .form__label {
+    flex-basis: 80%;
     margin-bottom: 5px;
     font-size: 15px;
     font-weight: bold;
+    text-align: center;
 }
 
 .form__input {
     display: block;
-    height: 35px;
-    width: 300px;
+
+    flex-basis: 100%;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
     background-color: rgba(219, 216, 251, 0.1);
+}
+
+.contact__button {
+    margin: 5px;
+    padding: 10px 15px;
 }
 
 
@@ -389,4 +408,412 @@ SEKCJA "FOOTER"
 .icon {
     width: 30px;
     height: 30px;
+}
+
+
+@media (min-width: 426px) {
+    address {
+        margin: 15px auto;
+    }
+
+    .contact__button {
+        margin: 15px;
+    }
+}
+
+@media (min-width: 500px) {
+
+    .concerts__date {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .button--buy-ticket {
+        padding: 10px 15px;
+    }
+}
+
+
+
+/*
+######################################
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+SEKCJA "FULL WERSION"
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+######################################
+*/
+
+@media (min-width: 801px) {
+
+    .button {
+        background-color: rgb(53, 20, 66);
+        border: none;
+        border-radius: 3px;
+        text-transform: uppercase;
+        color: rgba(204, 200, 255, 0.8);
+        padding: 10px 5px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .content-section {
+        min-height: 100vh;
+        width: 75%;
+        margin-left: 25%;
+        padding-right: 3%;
+        /* background-color: rgb(37, 15, 46); */
+        /* zmiana colorów tła */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+
+    .content-section__header {
+        display: block;
+        width: 100%;
+        height: 10vh;
+        text-align: right;
+        line-height: 10vh;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 15px;
+        letter-spacing: 3.8px;
+    }
+
+    /*
+    ######################################
+    SEKCJA "HEADER"
+    ######################################
+    */
+
+    header.page-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: fixed;
+        align-content: center;
+        top: 0;
+        left: 0;
+        width: 25%;
+        height: 35vh;
+        z-index: 1;
+        background-color: transparent;
+
+    }
+
+    header .page-brand {
+        flex-basis: 80%;
+        margin-bottom: 25px;
+        height: 10%;
+        background-image: url('./images/logo.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    header .page-brand img {
+        image-orientation: ;
+    }
+
+    header .menu-icons {
+        display: none;
+    }
+
+    header nav.page-navigation {
+        position: static;
+    }
+
+    nav.page-navigation {
+        display: none;
+    }
+
+    .page-navigation--full {
+        display: block;
+        flex-basis: 80%;
+    }
+
+
+    .page-navigation--full__items {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        align-content: space-between;
+    }
+
+    .page-navigation--full__item {
+        flex-basis: 100%;
+    }
+
+    .page-navigation--full__item a {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 6.7px;
+        color: rgb(239, 82, 142);
+    }
+
+
+    /*
+    ######################################
+    SEKCJA "HOME"
+    ######################################
+    */
+
+    section#home {
+        background-image: url("./images/background.svg");
+        background-repeat: none;
+        background-size: cover;
+    }
+
+    .band-members {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+
+    }
+
+    .band-members__item {
+        flex-basis: 45%;
+    }
+
+
+    .band-members__item p {
+        text-align: center;
+    }
+
+    .band-members__item p:nth-child(2) {
+        text-transform: uppercase;
+    }
+
+    .band-members__item p:nth-child(3) {
+        color: rgba(204, 200, 255, 0.4);
+    }
+
+    /*
+    ######################################
+    SEKCJA "ABOUT"
+    ######################################
+    */
+
+    section#about {
+        justify-content: flex-end;
+        align-content: flex-start;
+    }
+
+    .about--image-container {
+        width: 65%;
+        justify-self: right;
+        border-top: 3px solid rgb(239, 82, 142);
+        margin-bottom: 5px;
+
+    }
+
+    .about--image-container img {
+        height: auto;
+    }
+
+    .about-section__desc {
+        position: absolute;
+        top: 35vw;
+        left: 0;
+        width: 45%;
+        margin: 0;
+        padding: 20px;
+        border-bottom: 3px solid rgb(239, 82, 142);
+        background-color: rgb(50, 21, 63);
+    }
+
+    .about-section__desc-header {
+        margin: 0 0 10px 0;
+    }
+
+    /*
+    ######################################
+    SEKCJA "CONCERTS"
+    ######################################
+    */
+
+    .concerts {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        height: 80vh;
+        justify-content: space-between;
+    }
+
+    .concerts__item {
+        flex-basis: 45%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        align-content: flex-start;
+    }
+
+    .concerts__image {
+        height: auto;
+    }
+
+    .concerts__item__img {
+        flex-basis: 100%;
+        margin-right: 0;
+        border-right: none;
+        border-bottom: 3px solid rgb(239, 82, 142);
+    }
+
+    .concerts__info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .concerts__info-base {
+        text-align: start;
+    }
+
+    .concerts__date {
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+
+    /*
+    ######################################
+    SEKCJA "VIDEO"
+    ######################################
+    */
+
+    section#video {
+        min-height: 50vh;
+    }
+
+    .video-container {
+        margin: 10px auto;
+        text-align: center;
+        border-top: 3px solid rgb(239, 82, 142);
+    }
+
+
+    /*
+    ######################################
+    SEKCJA "PHOTOS"
+    ######################################
+    */
+
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+    }
+
+    .gallery__item {
+        margin: 5px;
+        flex-basis: 40%;
+        border-top: 3px solid rgb(239, 82, 142);
+    }
+
+
+    /*
+    ######################################
+    SEKCJA "CONTACT"
+    ######################################
+    */
+    #contact {
+        position: relative;
+    }
+
+    .contact__img-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    address {
+        text-align: center;
+        font-size: 20px;
+        margin: 5px auto;
+    }
+
+    .form {
+        margin-bottom: 10vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .form__field {
+        flex-basis: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-start;
+    }
+
+    .form__label {
+        flex-basis: 80%;
+        margin-bottom: 5px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .form__input {
+        display: block;
+
+        flex-basis: 100%;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        background-color: rgba(219, 216, 251, 0.1);
+    }
+
+    .contact__button {
+        margin: 5px;
+        padding: 10px 15px;
+    }
+
+
+    /*
+    ######################################
+    SEKCJA "FOOTER"
+    ######################################
+    */
+
+
+    .page-footer {
+        position: fixed;
+        bottom: 15px;
+        left: 0;
+        height: 25vh;
+        background-color: rgb(37, 15, 46);
+        width: 25%;
+    }
+
+    .social-links {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-wrap: wrap;
+
+        align-content: space-around;
+    }
+
+    .social-links__item {
+        flex-basis: 80%;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
 }

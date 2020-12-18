@@ -12,7 +12,7 @@
 <body>
     <header class="page-header">
         <div class="page-brand">
-            <img src="./images/logo.png" alt="6BM logo" />
+            <!-- <img src="./images/logo.png" alt="6BM logo" /> -->
         </div>
         <div class="menu-icons">
             <i class="fas fa-bars"></i>
@@ -35,6 +35,29 @@
                     <a href="#photos">Photos</a>
                 </li>
                 <li class="page-navigation__item">
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="page-navigation--full">
+            <ul class="page-navigation--full__items">
+                <li class="page-navigation--full__item">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="page-navigation--full__item">
+                    <a href="#about">About</a>
+                </li>
+                <li class="page-navigation--full__item">
+                    <a href="#concerts">Concerts</a>
+                </li>
+                <li class="page-navigation--full__item">
+                    <a href="#video">Video</a>
+                </li>
+                <li class="page-navigation--full__item">
+                    <a href="#photos">Photos</a>
+                </li>
+                <li class="page-navigation--full__item">
                     <a href="#contact">Contact</a>
                 </li>
             </ul>
@@ -90,7 +113,7 @@
                     </p>
                 </div>
         </section>
-        <section id="concerts" class="content-section">
+        <section id="concerts" class="content-section clearfix">
             <h2 class="content-section__header">Concerts</h2>
             <div class="concerts">
                 <article class="concerts__item">
@@ -148,10 +171,10 @@
             </div>
         </section>
 
-        <section id="video" class="content-section">
+        <section id="video" class="content-section clearfix">
             <h2 class="content-section__header">Video</h2>
             <div class="video-container">
-                <iframe width="350" height="250" src="https://www.youtube.com/embed/AstRXh-vKNI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe width="300" height="250" src="https://www.youtube.com/embed/AstRXh-vKNI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>            
         </section>
         <section id="photos" class="content-section">
@@ -206,7 +229,7 @@
                     <input class="form__input" type="text" name="topic" id="topic" required />
                 </div>
                 <div class="form__field">
-                    <button class="button" type="submit">Contact us!</button>
+                    <button class="button contact__button" type="submit">Contact us!</button>
                 </div>
             </form>
         </section>
@@ -236,10 +259,6 @@
             </li>
         </ul>
     </footer>
-
-
-
-
     <script src="main.js"></script>
 </body>
 </html>
