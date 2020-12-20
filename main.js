@@ -1,8 +1,11 @@
 const menuButton = document.querySelector('.menu-icons');
 const menu = document.querySelector('.page-navigation');
+const icons = document.querySelector('.icons--container');
+
 
 const showMenu = () => {
     menu.classList.toggle('active');
+    icons.classList.toggle('active');
 }
 
 menuButton.addEventListener('click', showMenu);
