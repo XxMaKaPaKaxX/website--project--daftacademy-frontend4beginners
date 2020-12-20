@@ -1,22 +1,16 @@
-/* font-family: 'Open Sans', sans-serif; */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 body {
     margin: 0 auto;
-
     color: rgba(204, 200, 255, 0.8);
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
     font-weight: normal;
     background-color: rgb(37, 15, 46);
-
-    /* display: flex; */
 }
 
 .clearfix::after {
@@ -110,7 +104,6 @@ header .menu-icons {
     transform: translate(-50%, -50%);
     font-size: 30px;
     color: rgb(240, 83, 143);
-
     overflow: hidden;
 }
 
@@ -125,7 +118,6 @@ header .menu-icons {
 .icons--container.active {
     transform: translateY(-50%);
 }
-
 
 .icons--container i {
     flex-basis: 100%;
@@ -144,11 +136,8 @@ header nav.page-navigation {
     left: 0;
     width: 100%;
     height: 30vh;
-    /* background-color: aqua; */
-
     transition: 0.3s;
     z-index: 4;
-    /* zmieniona ważność wyświetlania */
 }
 
 header nav.page-navigation.active {
@@ -325,13 +314,11 @@ section#video {
     border-top: 3px solid rgb(239, 82, 142);
 }
 
-
 /*
 ######################################
 SEKCJA "PHOTOS"
 ######################################
 */
-
 
 .gallery {
     display: flex;
@@ -450,7 +437,6 @@ SEKCJA "FOOTER"
 }
 
 @media (min-width: 500px) {
-
     .concerts__date {
         font-size: 20px;
         font-weight: bold;
@@ -492,14 +478,10 @@ SEKCJA "FULL WERSION"
         width: 80%;
         margin-left: 20%;
         padding-right: 3%;
-        /* background-color: rgb(37, 15, 46); */
-        /* zmiana colorów tła */
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-
-
 
     .content-section__header {
         display: block;
@@ -543,10 +525,6 @@ SEKCJA "FULL WERSION"
         background-size: contain;
     }
 
-    /* header .page-brand img {
-        image-orientation: ;
-    }
- */
     header .menu-icons {
         display: none;
     }
@@ -563,7 +541,6 @@ SEKCJA "FULL WERSION"
         display: block;
         flex-basis: 80%;
     }
-
 
     .page-navigation--full__items {
         display: flex;
@@ -583,7 +560,6 @@ SEKCJA "FULL WERSION"
         letter-spacing: 6.7px;
         color: rgb(239, 82, 142);
         transition: 0.2s;
-
     }
 
     .page-navigation--full__item a:hover {
@@ -606,12 +582,10 @@ SEKCJA "FULL WERSION"
     }
 
     .band-members {
-
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-content: space-between;
-
     }
 
     .band-members__item {
@@ -623,7 +597,6 @@ SEKCJA "FULL WERSION"
     .band-members__item:hover {
         opacity: 1;
     }
-
 
     .band-members__item p {
         text-align: center;
@@ -660,7 +633,6 @@ SEKCJA "FULL WERSION"
         justify-self: right;
         border-top: 3px solid rgb(239, 82, 142);
         margin-bottom: 5px;
-
     }
 
     .about--image-container img {
@@ -697,8 +669,8 @@ SEKCJA "FULL WERSION"
         display: flex;
         flex-wrap: wrap;
         margin: 0;
-        /* height: 80vh; */
         justify-content: space-between;
+        align-content: space-between;
     }
 
     .concerts__item {
@@ -767,7 +739,6 @@ SEKCJA "FULL WERSION"
     }
 
     .gallery {
-        /* align-self: flex-start; */
         height: 80vh;
         display: flex;
         flex-wrap: wrap;
@@ -841,7 +812,6 @@ SEKCJA "FULL WERSION"
 
     .form__input {
         display: block;
-
         flex-basis: 100%;
         padding: 10px 15px;
         border: none;
@@ -860,7 +830,6 @@ SEKCJA "FULL WERSION"
     SEKCJA "FOOTER"
     ######################################
     */
-
 
     .page-footer {
         position: fixed;
@@ -899,9 +868,23 @@ SEKCJA "FULL WERSION"
 @media (min-width: 1024px) {
 
     .content-section__header {
-
         font-size: 20px;
+    }
 
+    #concerts {
+        justify-content: flex-end;
+    }
+
+    .concerts {
+        flex-basis: 70%;
+    }
+
+    #photos {
+        justify-content: flex-end;
+    }
+
+    .gallery {
+        flex-basis: 70%;
     }
 
     /*
@@ -981,7 +964,4 @@ SEKCJA "FULL WERSION"
     .about-section__desc-details {
         font-size: 20px;
     }
-
-
-
 }
