@@ -6,7 +6,10 @@
     box-sizing: border-box;
 }
 
+
 body {
+    margin: 0 auto;
+
     color: rgba(204, 200, 255, 0.8);
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
@@ -15,7 +18,6 @@ body {
 
     /* display: flex; */
 }
-
 
 .clearfix::after {
     content: "";
@@ -58,6 +60,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: flex-start;
 }
 
 .content-section__header {
@@ -461,8 +464,8 @@ SEKCJA "FULL WERSION"
 
     .content-section {
         min-height: 100vh;
-        width: 75%;
-        margin-left: 25%;
+        width: 80%;
+        margin-left: 20%;
         padding-right: 3%;
         /* background-color: rgb(37, 15, 46); */
         /* zmiana colorów tła */
@@ -499,7 +502,7 @@ SEKCJA "FULL WERSION"
         align-content: center;
         top: 0;
         left: 0;
-        width: 25%;
+        width: 20%;
         height: 35vh;
         z-index: 1;
         background-color: transparent;
@@ -515,10 +518,10 @@ SEKCJA "FULL WERSION"
         background-size: contain;
     }
 
-    header .page-brand img {
+    /* header .page-brand img {
         image-orientation: ;
     }
-
+ */
     header .menu-icons {
         display: none;
     }
@@ -603,6 +606,7 @@ SEKCJA "FULL WERSION"
     section#about {
         justify-content: flex-end;
         align-content: flex-start;
+        position: relative;
     }
 
     .about--image-container {
@@ -619,10 +623,10 @@ SEKCJA "FULL WERSION"
 
     .about-section__desc {
         position: absolute;
-        top: 35vw;
+        bottom: 0;
         left: 0;
-        width: 45%;
-        margin: 0;
+        top: 50%;
+        width: 40%;
         padding: 20px;
         border-bottom: 3px solid rgb(239, 82, 142);
         background-color: rgb(50, 21, 63);
@@ -637,12 +641,17 @@ SEKCJA "FULL WERSION"
     SEKCJA "CONCERTS"
     ######################################
     */
+    #concerts {
+        background-image: url("./images/background.svg");
+        background-repeat: none;
+        background-size: cover;
+    }
 
     .concerts {
         display: flex;
         flex-wrap: wrap;
         margin: 0;
-        height: 80vh;
+        /* height: 80vh; */
         justify-content: space-between;
     }
 
@@ -650,7 +659,7 @@ SEKCJA "FULL WERSION"
         flex-basis: 45%;
         display: flex;
         flex-wrap: wrap;
-        margin: 0;
+        margin: 15px;
         align-content: flex-start;
     }
 
@@ -704,9 +713,16 @@ SEKCJA "FULL WERSION"
     SEKCJA "PHOTOS"
     ######################################
     */
-
+    #photos {
+        align-content: flex-start;
+        background-image: url("./images/background.svg");
+        background-repeat: none;
+        background-size: cover;
+    }
 
     .gallery {
+        /* align-self: flex-start; */
+        height: 80vh;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -714,8 +730,8 @@ SEKCJA "FULL WERSION"
     }
 
     .gallery__item {
-        margin: 5px;
-        flex-basis: 40%;
+        margin: 0;
+        flex-basis: 30%;
         border-top: 3px solid rgb(239, 82, 142);
     }
 
@@ -726,41 +742,55 @@ SEKCJA "FULL WERSION"
     ######################################
     */
     #contact {
-        position: relative;
+        align-content: flex-start;
+        justify-content: flex-start;
     }
 
     .contact__img-container {
-        width: 90%;
-        margin: 0 auto;
+        flex-basis: 60%;
+        margin: 0;
+    }
+
+    .contact__img-container .gallery__image {
+        height: auto;
     }
 
     address {
-        text-align: center;
-        font-size: 20px;
-        margin: 5px auto;
+        flex-basis: 40%;
+        text-align: left;
+        font-size: 15px;
+        margin: 0;
+        padding: 0 5%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
     }
 
     .form {
-        margin-bottom: 10vh;
+        flex-basis: 40%;
+        margin-bottom: 0;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .form__field {
-        flex-basis: 80%;
+        flex-basis: 100%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
         align-content: flex-start;
+        margin: 10px 0;
     }
 
     .form__label {
-        flex-basis: 80%;
+        flex-basis: 100%;
         margin-bottom: 5px;
         font-size: 15px;
         font-weight: bold;
-        text-align: center;
+        text-align: left;
     }
 
     .form__input {
@@ -774,7 +804,7 @@ SEKCJA "FULL WERSION"
     }
 
     .contact__button {
-        margin: 5px;
+        margin: 0;
         padding: 10px 15px;
     }
 
@@ -792,7 +822,7 @@ SEKCJA "FULL WERSION"
         left: 0;
         height: 25vh;
         background-color: rgb(37, 15, 46);
-        width: 25%;
+        width: 20%;
     }
 
     .social-links {
@@ -816,4 +846,96 @@ SEKCJA "FULL WERSION"
         width: 30px;
         height: 30px;
     }
+}
+
+
+
+@media (min-width: 1024px) {
+
+    .content-section__header {
+
+        font-size: 20px;
+
+    }
+
+    /*
+    ######################################
+    SEKCJA "HOME"
+    ######################################
+    */
+    .band-members {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .band-members__item .image-container {
+        height: 250px;
+        margin-bottom: 5px;
+    }
+
+    .band-members__name {
+        font-size: 20px;
+    }
+
+    .band-members__desc {
+        font-size: 16px;
+    }
+
+    /*
+    ######################################
+    SEKCJA "Galeria"
+    ######################################
+    */
+
+    .gallery {
+        height: auto;
+    }
+
+    .gallery__item {
+        margin: 5px;
+    }
+
+    /*
+    ######################################
+    SEKCJA "VIDEO"
+    ######################################
+    */
+
+    section#video {
+        min-height: 100vh;
+    }
+}
+
+@media (min-width: 1740px) {
+    /*
+    ######################################
+    SEKCJA "HOME"
+    ######################################
+    */
+
+    .band-members__item .image-container {
+        height: 400px;
+    }
+
+    p.address {
+        font-size: 25px;
+    }
+
+    /*
+    ######################################
+    SEKCJA "ABOUT"
+    ######################################
+    */
+    .about-section__desc-header {
+        font-size: 25px;
+        margin-bottom: 40px;
+    }
+
+    .about-section__desc-details {
+        font-size: 20px;
+    }
+
+
+
 }
