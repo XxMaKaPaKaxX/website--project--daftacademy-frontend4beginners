@@ -295,6 +295,7 @@ section#video {
 }
 
 .video-container {
+    width: 90%;
     margin: 10px auto;
     text-align: center;
     border-top: 3px solid rgb(239, 82, 142);

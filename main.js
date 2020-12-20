@@ -48,6 +48,8 @@ const setVideoSize = (video) => {
         video.height = video.width;
     }
 
+    console.log('resize done')
+
     window.addEventListener('resize', () => {
         setVideoSize(video);
     })
