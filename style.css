@@ -46,6 +46,7 @@ img {
     padding: 10px 5px;
     font-size: 13px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .content-section {
@@ -132,7 +133,7 @@ header .menu-icons {
 
 header nav.page-navigation {
     position: absolute;
-    top: -40vh;
+    top: -55vh;
     left: 0;
     width: 100%;
     height: 30vh;
@@ -208,7 +209,7 @@ section#home {
 }
 
 .band-members__item .image-container {
-    height: 150px;
+    height: 20vh;
 }
 
 .band-members__item p {

@@ -53,11 +53,13 @@ const setVideoSize = (video) => {
 
     console.log('resize done')
 
-    window.addEventListener('resize', () => {
-        setVideoSize(video);
-    })
+    
 }
 
 setVideoSize(video);
+
+window.addEventListener('resize', () => {
+        setVideoSize(video);
+    })
 
 
